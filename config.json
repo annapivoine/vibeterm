@@ -1,0 +1,6 @@
+{
+  "preferences": {
+    "include": ["dadjokes", "quotes", "fortune", "lifehacks", "facts"],
+    "exclude": []
+  }
+}
