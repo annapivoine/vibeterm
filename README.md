@@ -10,15 +10,17 @@ Vibeterm is a CLI tool that shows a random dad joke, inspirational quote, fortun
 
 ## Installation
 
+### Option 1: compile binary (slower)
+
+1. Compile a `vibeterm` binary in the project directory:
+
 ```sh
 git clone https://github.com/annapivoine/vibeterm.git
 cd vibeterm
 make build
 ```
 
-This creates a vibeterm binary in the project directory.
-
-Optional cleanup:
+2. Optional cleanup:
 
 ```sh
 make clean
@@ -26,18 +28,56 @@ make clean
 
 (removes intermediate build files but keeps the compiled binary.)
 
+3. Run the app:
+
+```sh
+./vibeterm # -h, --help for details or read below
+```
+
+### Option 2: Use `uv` (faster)
+
+Install `uv` (prerequisite).
+
+```
+curl -Ls https://astral.sh/uv/install.sh | sh
+```
+
+1. Clone the repo:
+
+```sh
+git clone git@github.com:annapivoine/vibeterm.git
+cd vibeterm
+```
+
+2. Create virtual environment and install dependencies:
+
+```sh
+uv venv
+source .venv/bin/activate
+uv sync
+```
+
+3. Run the app:
+
+```sh
+uv run __main__.py # -h, --help for details or read below
+```
+
 ## Usage
-
-### Run Vibeterm:
-
-`./vibeterm`
-
-### Options
 
 - `-i`, `--include`: Specify which content types to include (e.g., `dadjokes quotes`, you can also include `all`).
 - `-e`, `--exclude`: Specify which content types to exclude (e.g., `facts lifehacks`).
 - `--update-config`: Update your configuration preferences.
 - `--view-config`: View your current configuration.
+
+Available sources:
+- dadjokes
+- facts
+- fortune
+- lifehacks
+- quotes
+
+For `-i, --include` you can use `all` option.
 
 ### Example:
 
@@ -45,6 +85,7 @@ make clean
 ./vibeterm --include quotes fortune --update-config
 ./vibeterm --view-config
 ```
+Currently you need to provide a full list of the resources to be included or excluded. If you provide both, `--inlcude` will take precedence.
 
 ## Configuration
 

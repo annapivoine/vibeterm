@@ -1,0 +1,7 @@
+[project]
+name = "vibeterm"
+version = "1.0"
+requires-python = ">=3.12"
+description = "CLI tool to get vibes"
+readme = "README.md"
+dependencies = ["certifi"]
