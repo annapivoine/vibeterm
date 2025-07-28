@@ -118,7 +118,9 @@ Default:
 
 ## Important note
 
-This project was made for the [Boot.dev](https://www.boot.dev/) Hackathon. The binary runs a bit slow because Python isn’t really meant to be compiled. I went with a binary anyway just to make it easier for people to try out. I could use another language to make it faster, but that’s not where I’m at yet.
+This project was made for the [Boot.dev](https://www.boot.dev/) Hackathon.
+The binary runs a bit slow because Python isn’t really meant to be compiled. I went with a binary as an option anyway just to make it easier for people to try out. I could use another language to make it faster, but that’s not where I’m at yet.
+It's possible to run it faster using `uv`.
 
 ## License
 
