@@ -75,6 +75,10 @@ Default:
 - `runner.py`: Main logic for selecting and displaying content.
 - `providers/`: Individual content providers.
 
+## Important note
+
+This project was made for the [Boot.dev](https://www.boot.dev/) Hackathon. The binary runs a bit slow because Python isn’t really meant to be compiled. I went with a binary anyway just to make it easier for people to try out. I could use another language to make it faster, but that’s not where I’m at yet.
+
 ## License
 
 MIT License.
